@@ -1,5 +1,8 @@
 package com.jieyi.learnmore;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.os.Build;
@@ -7,6 +10,7 @@ import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -114,6 +118,8 @@ public class PhoneBookActivity extends AppCompatActivity {
            int index =0;
            if(cursor.getCount()<0 || cursor.getCount()==0){
                Toast.makeText(PhoneBookActivity.this,"您拒绝了读取联系人权限，是否重新开启",Toast.LENGTH_LONG).show();
+openSetting();
+
                return;
            }
            while (cursor.moveToNext()){
@@ -127,7 +133,7 @@ public class PhoneBookActivity extends AppCompatActivity {
        } catch (Exception e) {
           // e.printStackTrace();
            Log.e("zyh","-----try catch is going -------");
-           Toast.makeText(PhoneBookActivity.this,"您拒绝了读取联系人权限，是否重新开启",Toast.LENGTH_LONG).show();
+           Toast.makeText(PhoneBookActivity.this,"您拒绝了读取联系人权限，",Toast.LENGTH_LONG).show();
        }
 
 
@@ -152,6 +158,33 @@ public class PhoneBookActivity extends AppCompatActivity {
 
 
         }
+
+
+    }
+
+    private  void  openSetting(){
+
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(PhoneBookActivity.this);
+        builder.setTitle("打开设置页面");
+        builder.setMessage("请打开权限设置页面，允许访问手机通讯录~~");
+        builder.setNegativeButton("取消",null);
+        builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent("com.meizu.safe.security.SHOW_APPSEC");
+                intent.addCategory(Intent.CATEGORY_DEFAULT);
+                intent.putExtra("packageName", BuildConfig.APPLICATION_ID);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                try {
+                    startActivity(intent);
+                } catch (Exception e) {
+                    e.printStackTrace();
+
+                }
+            }
+        });
+        builder.show();
 
 
     }
