@@ -3,7 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/LearnMore.iml" filepath="$PROJECT_DIR$/LearnMore.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgressCustomDemo/ProgressCustomDemo.iml" filepath="$PROJECT_DIR$/ProgressCustomDemo/ProgressCustomDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bluetoothChatDemo/bluetoothChatDemo.iml" filepath="$PROJECT_DIR$/bluetoothChatDemo/bluetoothChatDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/uploadimageWebview/uploadimageWebview.iml" filepath="$PROJECT_DIR$/uploadimageWebview/uploadimageWebview.iml" />
     </modules>
   </component>
 </project>
