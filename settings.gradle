@@ -1,1 +1,3 @@
-include ':app'
+include ':app', ':uploadimageWebview'
+include ':ProgressCustomDemo'
+include ':bluetoothChatDemo'

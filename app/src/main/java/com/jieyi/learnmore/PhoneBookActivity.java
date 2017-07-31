@@ -118,7 +118,7 @@ public class PhoneBookActivity extends AppCompatActivity {
            int index =0;
            if(cursor.getCount()<0 || cursor.getCount()==0){
                Toast.makeText(PhoneBookActivity.this,"您拒绝了读取联系人权限，是否重新开启",Toast.LENGTH_LONG).show();
-openSetting();
+           openSetting();
 
                return;
            }
