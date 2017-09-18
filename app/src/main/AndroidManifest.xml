@@ -28,7 +28,8 @@
             android:name=".AddressBookActivity"
             android:label="通讯录开发" />
         <activity android:name=".AutoFlowLayoutActivity" />
-        <activity android:name=".DownLoadAppActivity"></activity>
+        <activity android:name=".DownLoadAppActivity" />
+        <activity android:name=".customview.PieChartActivity"></activity>
     </application>
 
 </manifest>
