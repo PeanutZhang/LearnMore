@@ -11,6 +11,10 @@
             <option value="$PROJECT_DIR$/ProgressCustomDemo" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/bluetoothChatDemo" />
+            <option value="$PROJECT_DIR$/library" />
+            <option value="$PROJECT_DIR$/ocrDemo" />
+            <option value="$PROJECT_DIR$/ocr_ui" />
+            <option value="$PROJECT_DIR$/sophixdemo" />
             <option value="$PROJECT_DIR$/uploadimageWebview" />
           </set>
         </option>

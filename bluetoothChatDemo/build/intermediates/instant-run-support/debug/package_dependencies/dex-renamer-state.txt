@@ -1,4 +1,0 @@
-#Fri Jul 28 11:06:41 CST 2017
-base.0=D\:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_741cbd216962d087ffff506ce0ddfa34055e1ee1
-renamed.0=classes.dex
-file.0=D\:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\support-v4-18.0.0_741cbd216962d087ffff506ce0ddfa34055e1ee1\\classes.dex

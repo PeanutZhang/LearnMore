@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg1"
     tools:context="com.jieyi.learnmore.MainActivity">
-   <include layout="@layout/base_toolbar_title"/>
-   <ListView
-       android:id="@+id/mhomelistview"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent">
+    <ListView
+        android:id="@+id/home_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-   </ListView>
+    </ListView>
 
 </LinearLayout>

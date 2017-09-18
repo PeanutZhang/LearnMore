@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.app.Application;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.TextView;
@@ -39,7 +40,8 @@ public class BaseAPP extends Application {
     public void onCreate() {
         super.onCreate();
 
-
+        StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+        StrictMode.setVmPolicy(builder.build());
      registerActivityLifecycleCallbacks(new Application.ActivityLifecycleCallbacks() {
 //         @Override
 //         public void onActivityCreated(Activity activity, Bundle savedInstanceState) {

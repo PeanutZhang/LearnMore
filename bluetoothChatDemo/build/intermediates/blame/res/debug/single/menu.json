@@ -1,14 +1,14 @@
 [
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\menu\\my_chat.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\menu\\my_chat.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\menu\\my_chat.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\menu\\my_chat.xml"
     },
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\menu\\main.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\menu\\chat.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\menu\\chat.xml"
     },
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\menu\\chat.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\menu\\chat.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\menu\\main.xml"
     }
 ]

@@ -1,7 +1,0 @@
-#Fri Jul 28 11:07:46 CST 2017
-base.0=D\:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c96da078e7624a90da2fb0a6fc46dce3c5166627
-renamed.1=classes2.dex
-renamed.0=classes.dex
-file.1=D\:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e5eb339dd5a7cf28db3b1519b0a7da2878bdb176\\classes.dex
-base.1=D\:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run-bootstrap_e5eb339dd5a7cf28db3b1519b0a7da2878bdb176
-file.0=D\:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10000\\instant-run_c96da078e7624a90da2fb0a6fc46dce3c5166627\\classes.dex

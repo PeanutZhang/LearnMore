@@ -3,6 +3,8 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/bluetoothChatDemo/src/main/java/com/example/bluetooth_8g/chat/ClientThread.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/bluetoothChatDemo/src/main/java/com/example/bluetooth_8g/chat/MyChatActivity.java" charset="GBK" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/sophixdemo/build.gradle" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/sophixdemo/src/main/java/com/zyh/sophixdemo/MainActivity.java" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>

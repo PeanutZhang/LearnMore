@@ -1,22 +1,22 @@
 [
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\list_say_me_item.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\list_say_me_item.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\list_say_me_item.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\list_say_me_item.xml"
     },
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\list_say_she_item.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\list_say_she_item.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_chat.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\activity_chat.xml"
     },
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_chat.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\activity_chat.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\device_item.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\device_item.xml"
     },
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\device_item.xml",
-        "source": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\device_item.xml"
+        "merged": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\res\\merged\\debug\\layout\\list_say_she_item.xml",
+        "source": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\layout\\list_say_she_item.xml"
     }
 ]

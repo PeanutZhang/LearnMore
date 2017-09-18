@@ -1,0 +1,87 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+
+    defaultConfig {
+        applicationId "com.zyh.sophixdemo"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    signingConfigs {
+        debug {
+//            storeFile file("D:\\lqzhuang\\appmarketsinfo\\signinfo\\lqz_signfk.jks")
+//            storePassword "lingqianzhuang2018"
+//            keyAlias "hualingqian"
+//            keyPassword "lingqianzhuang2018"
+//            v2SigningEnabled false
+        }
+        //你自己的keystore信息
+        release {
+            storeFile file("E:\\asignfile\\sopsign.jks")
+            storePassword "123456"
+            keyAlias "zyh"
+            keyPassword "123456"
+            v2SigningEnabled false
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+            buildConfigField "boolean", "ISDEBUG", "true"
+
+        }
+        release {
+            buildConfigField "boolean", "ISDEBUG", "true"
+            signingConfig signingConfigs.release
+            applicationVariants.all { variant ->
+                if (variant.buildType.name.equals('release')) {
+                    variant.outputs.each { output ->
+                        def outputFile = output.outputFile
+                        if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                            def fileName = "zyh_${defaultConfig.versionName}_${variant.flavorName}.apk"
+                            output.outputFile = new File(outputFile.parent, fileName)
+                        }
+                    }
+                }
+            }
+            productFlavors.all { flavor ->
+                manifestPlaceholders.put("BaiduMobAd_CHANNEL_VALUE", name)
+            }
+//            minifyEnabled true
+//            zipAlignEnabled true
+//            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    productFlavors {
+        LQZYYBO {}
+
+    }
+
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    testCompile 'junit:junit:4.12'
+    compile 'com.aliyun.ams:alicloud-android-hotfix:3.1.0'
+}

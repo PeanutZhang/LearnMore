@@ -1,6 +1,6 @@
 [
     {
-        "outputFile": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
+        "outputFile": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values\\values.xml",
         "map": [
             {
                 "to": {
@@ -11,13 +11,13 @@
                     "endOffset": 108
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\dimens.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 92,
+                        "startOffset": 89,
                         "endColumn": 57,
-                        "endOffset": 145
+                        "endOffset": 142
                     }
                 }
             },
@@ -30,13 +30,13 @@
                     "endOffset": 164
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\dimens.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\dimens.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 151,
+                        "startOffset": 147,
                         "endColumn": 55,
-                        "endOffset": 202
+                        "endOffset": 198
                     }
                 }
             },
@@ -49,13 +49,13 @@
                     "endOffset": 217
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 111,
+                        "startOffset": 107,
                         "endColumn": 52,
-                        "endOffset": 159
+                        "endOffset": 155
                     }
                 }
             },
@@ -68,13 +68,13 @@
                     "endOffset": 268
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 59,
+                        "startOffset": 56,
                         "endColumn": 50,
-                        "endOffset": 105
+                        "endOffset": 102
                     }
                 }
             },
@@ -87,13 +87,13 @@
                     "endOffset": 321
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 5,
                         "startColumn": 4,
-                        "startOffset": 165,
+                        "startOffset": 160,
                         "endColumn": 52,
-                        "endOffset": 213
+                        "endOffset": 208
                     }
                 }
             },
@@ -106,13 +106,13 @@
                     "endOffset": 382
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 219,
+                        "startOffset": 213,
                         "endColumn": 60,
-                        "endOffset": 275
+                        "endOffset": 269
                     }
                 }
             },
@@ -125,13 +125,13 @@
                     "endOffset": 448
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\strings.xml",
                     "position": {
                         "startLine": 7,
                         "startColumn": 4,
-                        "startOffset": 281,
+                        "startOffset": 274,
                         "endColumn": 65,
-                        "endOffset": 342
+                        "endOffset": 335
                     }
                 }
             },
@@ -145,14 +145,14 @@
                     "endOffset": 739
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\styles.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 191,
+                        "startOffset": 186,
                         "endLine": 12,
                         "endColumn": 12,
-                        "endOffset": 481
+                        "endOffset": 472
                     }
                 }
             },
@@ -166,14 +166,14 @@
                     "endOffset": 899
                 },
                 "from": {
-                    "file": "D:\\workspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\styles.xml",
+                    "file": "E:\\asworkspace\\LearnMore\\bluetoothChatDemo\\src\\main\\res\\values\\styles.xml",
                     "position": {
                         "startLine": 15,
                         "startColumn": 4,
-                        "startOffset": 522,
+                        "startOffset": 510,
                         "endLine": 17,
                         "endColumn": 12,
-                        "endOffset": 679
+                        "endOffset": 665
                     }
                 }
             }
