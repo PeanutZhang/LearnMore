@@ -7,11 +7,21 @@
     android:orientation="vertical"
     android:gravity="center_horizontal"
     tools:context="com.jieyi.learnmore.customview.PieChartActivity">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+   <LinearLayout
+       android:gravity="center_horizontal"
+       android:orientation="vertical"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+
     <com.jieyi.learnmore.customview.PieChartView
         android:id="@+id/pie_view"
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="360dp" />
+        android:layout_height="260dp" />
     <Button
         android:id="@+id/add_pieData"
         android:text="填充数据"
@@ -28,5 +38,10 @@
         android:text="设置开始绘制角度"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+  <com.jieyi.learnmore.customview.TranslateView
+      android:id="@+id/translateView"
+      android:layout_width="360dp"
+      android:layout_height="360dp" />
+</LinearLayout>
+   </ScrollView>
 </LinearLayout>
