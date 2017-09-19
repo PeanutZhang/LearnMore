@@ -11,6 +11,8 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent">
    <LinearLayout
+       android:focusable="true"
+       android:focusableInTouchMode="true"
        android:gravity="center_horizontal"
        android:orientation="vertical"
        android:layout_width="match_parent"
@@ -28,6 +30,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <EditText
+
         android:id="@+id/edit_setStartAngle"
         android:textSize="18sp"
         android:hint="输入开始绘制角度"
@@ -38,10 +41,63 @@
         android:text="设置开始绘制角度"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-  <com.jieyi.learnmore.customview.TranslateView
+     <com.jieyi.learnmore.customview.TranslateView
       android:id="@+id/translateView"
       android:layout_width="360dp"
       android:layout_height="360dp" />
+
+       <RelativeLayout
+           android:id="@+id/leaf_content"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="50dp" >
+           <com.jieyi.learnmore.customview.LeafLoadingView
+               android:id="@+id/leaf_loading"
+               android:layout_width="302dp"
+               android:layout_height="61dp"
+               android:layout_centerHorizontal="true" />
+
+           <ImageView
+               android:id="@+id/fan_pic"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_alignParentRight="true"
+               android:layout_centerVertical="true"
+               android:layout_marginRight="35dp"
+               android:src="@drawable/fengshan" />
+       </RelativeLayout>
+
+       <Button
+           android:id="@+id/clear_progress"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="15dp"
+           android:text="delete_progress_btn_text"
+           android:textSize="18dp" />
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginLeft="15dp"
+           android:layout_marginRight="15dp"
+           android:layout_marginTop="15dp"
+           android:orientation="horizontal" >
+
+           <Button
+               android:id="@+id/add_progress"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="increase_the_progress_btn_text"
+               android:textSize="18dp" />
+
+           <TextView
+               android:id="@+id/text_progress"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center_vertical"
+               android:textColor="#ffffa800"
+               android:textSize="15dp" />
+           </LinearLayout>
 </LinearLayout>
    </ScrollView>
 </LinearLayout>

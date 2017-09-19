@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/jieyi/learnmore/customview/AnimationUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/fengshan.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/gastudio_icon.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/leaf.png" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/leaf_kuang.png" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/bluetoothChatDemo/src/main/java/com/example/bluetooth_8g/chat/ClientThread.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/bluetoothChatDemo/src/main/java/com/example/bluetooth_8g/chat/MyChatActivity.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/sophixdemo/build.gradle" charset="GBK" />
     <file url="file://$PROJECT_DIR$/sophixdemo/src/main/java/com/zyh/sophixdemo/MainActivity.java" charset="UTF-8" />
-    <file url="PROJECT" charset="UTF-8" />
+    <file url="PROJECT" charset="GBK" />
   </component>
 </project>
