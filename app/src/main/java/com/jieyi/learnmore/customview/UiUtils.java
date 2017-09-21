@@ -16,7 +16,12 @@ public static int getScreenWidth(Context context){
     ((WindowManager)context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(dm);
     return  dm.widthPixels;
 }
+    public static int getScreenHidth(Context context){
 
+        DisplayMetrics dm = new DisplayMetrics();
+        ((WindowManager)context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay().getMetrics(dm);
+        return  dm.heightPixels;
+    }
  public static int dip2px(Context context,int dip){
      return (int) (dip * getScreenDensity(context)+0.5f);
  }

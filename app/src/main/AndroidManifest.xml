@@ -30,7 +30,7 @@
             android:label="通讯录开发" />
         <activity android:name=".AutoFlowLayoutActivity" />
         <activity android:name=".DownLoadAppActivity" />
-        <activity android:name=".customview.PieChartActivity"></activity>
+        <activity android:name=".customview.CustomViewActivity"></activity>
     </application>
 
 </manifest>

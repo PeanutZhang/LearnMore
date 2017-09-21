@@ -8,13 +8,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.jieyi.learnmore.customview.PieChartActivity;
+import com.jieyi.learnmore.customview.CustomViewActivity;
 
 public class MainActivity extends AppCompatActivity {
 
     private final String[] MTITLES ={"电话本","流式布局使用","下载并安装apk","自定义饼状图demo 入门学习"};
     private final Class[]  ACTS={PhoneBookActivity.class,AutoFlowLayoutActivity.class,
-            DownLoadAppActivity.class,PieChartActivity.class};
+            DownLoadAppActivity.class,CustomViewActivity.class};
     private ListView mlistview;
 
     @Override

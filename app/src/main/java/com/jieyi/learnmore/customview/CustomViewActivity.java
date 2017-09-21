@@ -18,7 +18,7 @@ import com.jieyi.learnmore.R;
 import java.util.ArrayList;
 import java.util.Random;
 
-public class PieChartActivity extends AppCompatActivity {
+public class CustomViewActivity extends AppCompatActivity {
 
     private ArrayList<PieData> mdata;
     private PieChartView pieChartView;
@@ -54,10 +54,15 @@ public class PieChartActivity extends AppCompatActivity {
             }
         };
     };
+    private boolean mode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pie_chart);
+
+        Log.e("zyh","density--> "+UiUtils.getScreenDensity(getBaseContext())+"\r\n screenWidth--> "+UiUtils.getScreenWidth(getBaseContext())+
+        "  screenHeight--> "+UiUtils.getScreenHidth(getBaseContext()));
+
         pieChartView = (PieChartView) findViewById(R.id.pie_view);
 
         findViewById(R.id.add_pieData).setOnClickListener(v -> {
@@ -86,6 +91,12 @@ public class PieChartActivity extends AppCompatActivity {
                 Animation.INFINITE);
         mFanView.startAnimation(rotateAnimation);
         mHandler.sendEmptyMessageDelayed(REFRESH_PROGRESS,3000);
+        setPieData();
+
+        Bezier2 bezier2 = (Bezier2) findViewById(R.id.bezier2_);
+        findViewById(R.id.btn_setmode).setOnClickListener(v->{
+            bezier2.setMode(!mode);
+        });
     }
 
     private void setStartAngle(){
@@ -97,6 +108,7 @@ public class PieChartActivity extends AppCompatActivity {
         }
         int mstartAngle = Integer.parseInt(startAngle);
         pieChartView.setStartangle(mstartAngle);
+
     }
 
     private void setPieData(){

@@ -30,35 +30,35 @@ import java.util.Random;
 public class LeafLoadingView extends View {
 
     private static final String TAG = "LeafLoadingView";
-    // µ­°×É«
+    // æ·¡ç™½è‰²
     private static final int WHITE_COLOR = 0xfffde399;
-    // ³ÈÉ«
+    // æ©™è‰²
     private static final int ORANGE_COLOR = 0xffffa800;
-    // ÖĞµÈÕñ·ù´óĞ¡
+    // ä¸­ç­‰æŒ¯å¹…å¤§å°
     private static final int MIDDLE_AMPLITUDE = 13;
-    // ²»Í¬ÀàĞÍÖ®¼äµÄÕñ·ù²î¾à
+    // ä¸åŒç±»å‹ä¹‹é—´çš„æŒ¯å¹…å·®è·
     private static final int AMPLITUDE_DISPARITY = 5;
 
-    // ×Ü½ø¶È
+    // æ€»è¿›åº¦
     private static final int TOTAL_PROGRESS = 100;
-    // Ò¶×ÓÆ®¶¯Ò»¸öÖÜÆÚËù»¨µÄÊ±¼ä
+    // å¶å­é£˜åŠ¨ä¸€ä¸ªå‘¨æœŸæ‰€èŠ±çš„æ—¶é—´
     private static final long LEAF_FLOAT_TIME = 3000;
-    // Ò¶×ÓĞı×ªÒ»ÖÜĞèÒªµÄÊ±¼ä
+    // å¶å­æ—‹è½¬ä¸€å‘¨éœ€è¦çš„æ—¶é—´
     private static final long LEAF_ROTATE_TIME = 2000;
 
-    // ÓÃÓÚ¿ØÖÆ»æÖÆµÄ½ø¶ÈÌõ¾àÀë×ó£¯ÉÏ£¯ÏÂµÄ¾àÀë
+    // ç”¨äºæ§åˆ¶ç»˜åˆ¶çš„è¿›åº¦æ¡è·ç¦»å·¦ï¼ä¸Šï¼ä¸‹çš„è·ç¦»
     private static final int LEFT_MARGIN = 9;
-    // ÓÃÓÚ¿ØÖÆ»æÖÆµÄ½ø¶ÈÌõ¾àÀëÓÒµÄ¾àÀë
+    // ç”¨äºæ§åˆ¶ç»˜åˆ¶çš„è¿›åº¦æ¡è·ç¦»å³çš„è·ç¦»
     private static final int RIGHT_MARGIN = 25;
     private int mLeftMargin, mRightMargin;
-    // ÖĞµÈÕñ·ù´óĞ¡
+    // ä¸­ç­‰æŒ¯å¹…å¤§å°
     private int mMiddleAmplitude = MIDDLE_AMPLITUDE;
-    // Õñ·ù²î
+    // æŒ¯å¹…å·®
     private int mAmplitudeDisparity = AMPLITUDE_DISPARITY;
 
-    // Ò¶×ÓÆ®¶¯Ò»¸öÖÜÆÚËù»¨µÄÊ±¼ä
+    // å¶å­é£˜åŠ¨ä¸€ä¸ªå‘¨æœŸæ‰€èŠ±çš„æ—¶é—´
     private long mLeafFloatTime = LEAF_FLOAT_TIME;
-    // Ò¶×ÓĞı×ªÒ»ÖÜĞèÒªµÄÊ±¼ä
+    // å¶å­æ—‹è½¬ä¸€å‘¨éœ€è¦çš„æ—¶é—´
     private long mLeafRotateTime = LEAF_ROTATE_TIME;
     private Resources mResources;
     private Bitmap mLeafBitmap;
@@ -72,22 +72,22 @@ public class LeafLoadingView extends View {
 
     private Paint mBitmapPaint, mWhitePaint, mOrangePaint;
     private RectF mWhiteRectF, mOrangeRectF, mArcRectF;
-    // µ±Ç°½ø¶È
+    // å½“å‰è¿›åº¦
     private int mProgress;
-    // Ëù»æÖÆµÄ½ø¶ÈÌõ²¿·ÖµÄ¿í¶È
+    // æ‰€ç»˜åˆ¶çš„è¿›åº¦æ¡éƒ¨åˆ†çš„å®½åº¦
     private int mProgressWidth;
-    // µ±Ç°ËùÔÚµÄ»æÖÆµÄ½ø¶ÈÌõµÄÎ»ÖÃ
+    // å½“å‰æ‰€åœ¨çš„ç»˜åˆ¶çš„è¿›åº¦æ¡çš„ä½ç½®
     private int mCurrentProgressPosition;
-    // »¡ĞÎµÄ°ë¾¶
+    // å¼§å½¢çš„åŠå¾„
     private int mArcRadius;
 
-    // arcµÄÓÒÉÏ½ÇµÄx×ø±ê£¬Ò²ÊÇ¾ØĞÎx×ø±êµÄÆğÊ¼µã
+    // arcçš„å³ä¸Šè§’çš„xåæ ‡ï¼Œä¹Ÿæ˜¯çŸ©å½¢xåæ ‡çš„èµ·å§‹ç‚¹
     private int mArcRightLocation;
-    // ÓÃÓÚ²úÉúÒ¶×ÓĞÅÏ¢
+    // ç”¨äºäº§ç”Ÿå¶å­ä¿¡æ¯
     private LeafFactory mLeafFactory;
-    // ²úÉú³öµÄÒ¶×ÓĞÅÏ¢
+    // äº§ç”Ÿå‡ºçš„å¶å­ä¿¡æ¯
     private List<Leaf> mLeafInfos;
-    // ÓÃÓÚ¿ØÖÆËæ»úÔö¼ÓµÄÊ±¼ä²»±§ÍÅ
+    // ç”¨äºæ§åˆ¶éšæœºå¢åŠ çš„æ—¶é—´ä¸æŠ±å›¢
     private int mAddTime;
 
     public LeafLoadingView(Context context, AttributeSet attrs) {
@@ -125,8 +125,8 @@ public class LeafLoadingView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
-        // »æÖÆ½ø¶ÈÌõºÍÒ¶×Ó
-        // Ö®ËùÒÔ°ÑÒ¶×Ó·ÅÔÚ½ø¶ÈÌõÀï»æÖÆ£¬Ö÷ÒªÊÇ²ã¼¶Ô­Òò
+        // ç»˜åˆ¶è¿›åº¦æ¡å’Œå¶å­
+        // ä¹‹æ‰€ä»¥æŠŠå¶å­æ”¾åœ¨è¿›åº¦æ¡é‡Œç»˜åˆ¶ï¼Œä¸»è¦æ˜¯å±‚çº§åŸå› 
         drawProgressAndLeafs(canvas);
         // drawLeafs(canvas);
 
@@ -140,33 +140,33 @@ public class LeafLoadingView extends View {
         if (mProgress >= TOTAL_PROGRESS) {
             mProgress = 0;
         }
-        // mProgressWidthÎª½ø¶ÈÌõµÄ¿í¶È£¬¸ù¾İµ±Ç°½ø¶ÈËã³ö½ø¶ÈÌõµÄÎ»ÖÃ
+        // mProgressWidthä¸ºè¿›åº¦æ¡çš„å®½åº¦ï¼Œæ ¹æ®å½“å‰è¿›åº¦ç®—å‡ºè¿›åº¦æ¡çš„ä½ç½®
         mCurrentProgressPosition = mProgressWidth * mProgress / TOTAL_PROGRESS;
-        // ¼´µ±Ç°Î»ÖÃÔÚÍ¼ÖĞËùÊ¾1·¶Î§ÄÚ
+        // å³å½“å‰ä½ç½®åœ¨å›¾ä¸­æ‰€ç¤º1èŒƒå›´å†…
         if (mCurrentProgressPosition < mArcRadius) {
             Log.i(TAG, "mProgress = " + mProgress + "---mCurrentProgressPosition = "
                     + mCurrentProgressPosition
                     + "--mArcProgressWidth" + mArcRadius);
-            // 1.»æÖÆ°×É«ARC£¬»æÖÆorange ARC
-            // 2.»æÖÆ°×É«¾ØĞÎ
+            // 1.ç»˜åˆ¶ç™½è‰²ARCï¼Œç»˜åˆ¶orange ARC
+            // 2.ç»˜åˆ¶ç™½è‰²çŸ©å½¢
 
-            // 1.»æÖÆ°×É«ARC
+            // 1.ç»˜åˆ¶ç™½è‰²ARC
             canvas.drawArc(mArcRectF, 90, 180, false, mWhitePaint);
 
-            // 2.»æÖÆ°×É«¾ØĞÎ
+            // 2.ç»˜åˆ¶ç™½è‰²çŸ©å½¢
             mWhiteRectF.left = mArcRightLocation;
             canvas.drawRect(mWhiteRectF, mWhitePaint);
 
-            // »æÖÆÒ¶×Ó
+            // ç»˜åˆ¶å¶å­
             drawLeafs(canvas);
 
-            // 3.»æÖÆ×ØÉ« ARC
-            // µ¥±ß½Ç¶È
+            // 3.ç»˜åˆ¶æ£•è‰² ARC
+            // å•è¾¹è§’åº¦
             int angle = (int) Math.toDegrees(Math.acos((mArcRadius - mCurrentProgressPosition)
                     / (float) mArcRadius));
-            // ÆğÊ¼µÄÎ»ÖÃ
+            // èµ·å§‹çš„ä½ç½®
             int startAngle = 180 - angle;
-            // É¨¹ıµÄ½Ç¶È
+            // æ‰«è¿‡çš„è§’åº¦
             int sweepAngle = 2 * angle;
             Log.i(TAG, "startAngle = " + startAngle);
             canvas.drawArc(mArcRectF, startAngle, sweepAngle, false, mOrangePaint);
@@ -174,19 +174,19 @@ public class LeafLoadingView extends View {
             Log.i(TAG, "mProgress = " + mProgress + "---transfer-----mCurrentProgressPosition = "
                     + mCurrentProgressPosition
                     + "--mArcProgressWidth" + mArcRadius);
-            // 1.»æÖÆwhite RECT
-            // 2.»æÖÆOrange ARC
-            // 3.»æÖÆorange RECT
-            // Õâ¸ö²ã¼¶½øĞĞ»æÖÆÄÜÈÃÒ¶×Ó¸Ğ¾õÊÇÈÚÈë×ØÉ«½ø¶ÈÌõÖĞ
+            // 1.ç»˜åˆ¶white RECT
+            // 2.ç»˜åˆ¶Orange ARC
+            // 3.ç»˜åˆ¶orange RECT
+            // è¿™ä¸ªå±‚çº§è¿›è¡Œç»˜åˆ¶èƒ½è®©å¶å­æ„Ÿè§‰æ˜¯èå…¥æ£•è‰²è¿›åº¦æ¡ä¸­
 
-            // 1.»æÖÆwhite RECT
+            // 1.ç»˜åˆ¶white RECT
             mWhiteRectF.left = mCurrentProgressPosition;
             canvas.drawRect(mWhiteRectF, mWhitePaint);
-            // »æÖÆÒ¶×Ó
+            // ç»˜åˆ¶å¶å­
             drawLeafs(canvas);
-            // 2.»æÖÆOrange ARC
+            // 2.ç»˜åˆ¶Orange ARC
             canvas.drawArc(mArcRectF, 90, 180, false, mOrangePaint);
-            // 3.»æÖÆorange RECT
+            // 3.ç»˜åˆ¶orange RECT
             mOrangeRectF.left = mArcRightLocation;
             mOrangeRectF.right = mCurrentProgressPosition;
             canvas.drawRect(mOrangeRectF, mOrangePaint);
@@ -196,7 +196,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * »æÖÆÒ¶×Ó
+     * ç»˜åˆ¶å¶å­
      *
      * @param canvas
      */
@@ -206,21 +206,21 @@ public class LeafLoadingView extends View {
         for (int i = 0; i < mLeafInfos.size(); i++) {
             Leaf leaf = mLeafInfos.get(i);
             if (currentTime > leaf.startTime && leaf.startTime != 0) {
-                // »æÖÆÒ¶×Ó£­£­¸ù¾İÒ¶×ÓµÄÀàĞÍºÍµ±Ç°Ê±¼äµÃ³öÒ¶×ÓµÄ£¨x£¬y£©
+                // ç»˜åˆ¶å¶å­ï¼ï¼æ ¹æ®å¶å­çš„ç±»å‹å’Œå½“å‰æ—¶é—´å¾—å‡ºå¶å­çš„ï¼ˆxï¼Œyï¼‰
                 getLeafLocation(leaf, currentTime);
-                // ¸ù¾İÊ±¼ä¼ÆËãĞı×ª½Ç¶È
+                // æ ¹æ®æ—¶é—´è®¡ç®—æ—‹è½¬è§’åº¦
                 canvas.save();
-                // Í¨¹ıMatrix¿ØÖÆÒ¶×ÓĞı×ª
+                // é€šè¿‡Matrixæ§åˆ¶å¶å­æ—‹è½¬
                 Matrix matrix = new Matrix();
                 float transX = mLeftMargin + leaf.x;
                 float transY = mLeftMargin + leaf.y;
                 Log.i(TAG, "left.x = " + leaf.x + "--leaf.y=" + leaf.y);
                 matrix.postTranslate(transX, transY);
-                // Í¨¹ıÊ±¼ä¹ØÁªĞı×ª½Ç¶È£¬Ôò¿ÉÒÔÖ±½ÓÍ¨¹ıĞŞ¸ÄLEAF_ROTATE_TIMEµ÷½ÚÒ¶×ÓĞı×ª¿ìÂı
+                // é€šè¿‡æ—¶é—´å…³è”æ—‹è½¬è§’åº¦ï¼Œåˆ™å¯ä»¥ç›´æ¥é€šè¿‡ä¿®æ”¹LEAF_ROTATE_TIMEè°ƒèŠ‚å¶å­æ—‹è½¬å¿«æ…¢
                 float rotateFraction = ((currentTime - leaf.startTime) % mLeafRotateTime)
                         / (float) mLeafRotateTime;
                 int angle = (int) (rotateFraction * 360);
-                // ¸ù¾İÒ¶×ÓĞı×ª·½ÏòÈ·¶¨Ò¶×ÓĞı×ª½Ç¶È
+                // æ ¹æ®å¶å­æ—‹è½¬æ–¹å‘ç¡®å®šå¶å­æ—‹è½¬è§’åº¦
                 int rotate = leaf.rotateDirection == 0 ? angle + leaf.rotateAngle : -angle
                         + leaf.rotateAngle;
                 matrix.postRotate(rotate, transX
@@ -248,21 +248,21 @@ public class LeafLoadingView extends View {
         leaf.y = getLocationY(leaf);
     }
 
-    // Í¨¹ıÒ¶×ÓĞÅÏ¢»ñÈ¡µ±Ç°Ò¶×ÓµÄYÖµ
+    // é€šè¿‡å¶å­ä¿¡æ¯è·å–å½“å‰å¶å­çš„Yå€¼
     private int getLocationY(Leaf leaf) {
         // y = A(wx+Q)+h
         float w = (float) ((float) 2 * Math.PI / mProgressWidth);
         float a = mMiddleAmplitude;
         switch (leaf.type) {
             case LITTLE:
-                // Ğ¡Õñ·ù £½ ÖĞµÈÕñ·ù £­ Õñ·ù²î
+                // å°æŒ¯å¹… ï¼ ä¸­ç­‰æŒ¯å¹… ï¼ æŒ¯å¹…å·®
                 a = mMiddleAmplitude - mAmplitudeDisparity;
                 break;
             case MIDDLE:
                 a = mMiddleAmplitude;
                 break;
             case BIG:
-                // Ğ¡Õñ·ù £½ ÖĞµÈÕñ·ù + Õñ·ù²î
+                // å°æŒ¯å¹… ï¼ ä¸­ç­‰æŒ¯å¹… + æŒ¯å¹…å·®
                 a = mMiddleAmplitude + mAmplitudeDisparity;
                 break;
             default:
@@ -315,21 +315,21 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * Ò¶×Ó¶ÔÏó£¬ÓÃÀ´¼ÇÂ¼Ò¶×ÓÖ÷ÒªÊı¾İ
+     * å¶å­å¯¹è±¡ï¼Œç”¨æ¥è®°å½•å¶å­ä¸»è¦æ•°æ®
      *
      * @author Ajian_Studio
      */
     private class Leaf {
 
-        // ÔÚ»æÖÆ²¿·ÖµÄÎ»ÖÃ
+        // åœ¨ç»˜åˆ¶éƒ¨åˆ†çš„ä½ç½®
         float x, y;
-        // ¿ØÖÆÒ¶×ÓÆ®¶¯µÄ·ù¶È
+        // æ§åˆ¶å¶å­é£˜åŠ¨çš„å¹…åº¦
         StartType type;
-        // Ğı×ª½Ç¶È
+        // æ—‹è½¬è§’åº¦
         int rotateAngle;
-        // Ğı×ª·½Ïò--0´ú±íË³Ê±Õë£¬1´ú±íÄæÊ±Õë
+        // æ—‹è½¬æ–¹å‘--0ä»£è¡¨é¡ºæ—¶é’ˆï¼Œ1ä»£è¡¨é€†æ—¶é’ˆ
         int rotateDirection;
-        // ÆğÊ¼Ê±¼ä(ms)
+        // èµ·å§‹æ—¶é—´(ms)
         long startTime;
     }
 
@@ -337,11 +337,11 @@ public class LeafLoadingView extends View {
         private static final int MAX_LEAFS = 8;
         Random random = new Random();
 
-        // Éú³ÉÒ»¸öÒ¶×ÓĞÅÏ¢
+        // ç”Ÿæˆä¸€ä¸ªå¶å­ä¿¡æ¯
         public Leaf generateLeaf() {
             Leaf leaf = new Leaf();
             int randomType = random.nextInt(3);
-            // ËæÊ±ÀàĞÍ£­ Ëæ»úÕñ·ù
+            // éšæ—¶ç±»å‹ï¼ éšæœºæŒ¯å¹…
             StartType type = StartType.MIDDLE;
             switch (randomType) {
                 case 0:
@@ -356,23 +356,23 @@ public class LeafLoadingView extends View {
                     break;
             }
             leaf.type = type;
-            // Ëæ»úÆğÊ¼µÄĞı×ª½Ç¶È
+            // éšæœºèµ·å§‹çš„æ—‹è½¬è§’åº¦
             leaf.rotateAngle = random.nextInt(360);
-            // Ëæ»úĞı×ª·½Ïò£¨Ë³Ê±Õë»òÄæÊ±Õë£©
+            // éšæœºæ—‹è½¬æ–¹å‘ï¼ˆé¡ºæ—¶é’ˆæˆ–é€†æ—¶é’ˆï¼‰
             leaf.rotateDirection = random.nextInt(2);
-            // ÎªÁË²úÉú½»´íµÄ¸Ğ¾õ£¬ÈÃ¿ªÊ¼µÄÊ±¼äÓĞÒ»¶¨µÄËæ»úĞÔ
+            // ä¸ºäº†äº§ç”Ÿäº¤é”™çš„æ„Ÿè§‰ï¼Œè®©å¼€å§‹çš„æ—¶é—´æœ‰ä¸€å®šçš„éšæœºæ€§
             mLeafFloatTime = mLeafFloatTime <= 0 ? LEAF_FLOAT_TIME : mLeafFloatTime;
             mAddTime += random.nextInt((int) (mLeafFloatTime * 2));
             leaf.startTime = System.currentTimeMillis() + mAddTime;
             return leaf;
         }
 
-        // ¸ù¾İ×î´óÒ¶×ÓÊı²úÉúÒ¶×ÓĞÅÏ¢
+        // æ ¹æ®æœ€å¤§å¶å­æ•°äº§ç”Ÿå¶å­ä¿¡æ¯
         public List<Leaf> generateLeafs() {
             return generateLeafs(MAX_LEAFS);
         }
 
-        // ¸ù¾İ´«ÈëµÄÒ¶×ÓÊıÁ¿²úÉúÒ¶×ÓĞÅÏ¢
+        // æ ¹æ®ä¼ å…¥çš„å¶å­æ•°é‡äº§ç”Ÿå¶å­ä¿¡æ¯
         public List<Leaf> generateLeafs(int leafSize) {
             List<Leaf> leafs = new LinkedList<Leaf>();
             for (int i = 0; i < leafSize; i++) {
@@ -383,7 +383,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * ÉèÖÃÖĞµÈÕñ·ù
+     * è®¾ç½®ä¸­ç­‰æŒ¯å¹…
      *
      * @param amplitude
      */
@@ -392,7 +392,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * ÉèÖÃÕñ·ù²î
+     * è®¾ç½®æŒ¯å¹…å·®
      *
      * @param disparity
      */
@@ -401,7 +401,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * »ñÈ¡ÖĞµÈÕñ·ù
+     * è·å–ä¸­ç­‰æŒ¯å¹…
      *
      * @param amplitude
      */
@@ -410,7 +410,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * »ñÈ¡Õñ·ù²î
+     * è·å–æŒ¯å¹…å·®
      *
      * @param disparity
      */
@@ -419,7 +419,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * ÉèÖÃ½ø¶È
+     * è®¾ç½®è¿›åº¦
      *
      * @param progress
      */
@@ -429,7 +429,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * ÉèÖÃÒ¶×ÓÆ®ÍêÒ»¸öÖÜÆÚËù»¨µÄÊ±¼ä
+     * è®¾ç½®å¶å­é£˜å®Œä¸€ä¸ªå‘¨æœŸæ‰€èŠ±çš„æ—¶é—´
      *
      * @param time
      */
@@ -438,7 +438,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * ÉèÖÃÒ¶×ÓĞı×ªÒ»ÖÜËù»¨µÄÊ±¼ä
+     * è®¾ç½®å¶å­æ—‹è½¬ä¸€å‘¨æ‰€èŠ±çš„æ—¶é—´
      *
      * @param time
      */
@@ -447,7 +447,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * »ñÈ¡Ò¶×ÓÆ®ÍêÒ»¸öÖÜÆÚËù»¨µÄÊ±¼ä
+     * è·å–å¶å­é£˜å®Œä¸€ä¸ªå‘¨æœŸæ‰€èŠ±çš„æ—¶é—´
      */
     public long getLeafFloatTime() {
         mLeafFloatTime = mLeafFloatTime == 0 ? LEAF_FLOAT_TIME : mLeafFloatTime;
@@ -455,7 +455,7 @@ public class LeafLoadingView extends View {
     }
 
     /**
-     * »ñÈ¡Ò¶×ÓĞı×ªÒ»ÖÜËù»¨µÄÊ±¼ä
+     * è·å–å¶å­æ—‹è½¬ä¸€å‘¨æ‰€èŠ±çš„æ—¶é—´
      */
     public long getLeafRotateTime() {
         mLeafRotateTime = mLeafRotateTime == 0 ? LEAF_ROTATE_TIME : mLeafRotateTime;
